@@ -140,7 +140,7 @@ to enter a new value/char. ***/
     }
     //end = start +ship -1;
     if (ship_radar(start, column, player_board)==1){
-        for (int i = start; i<=end;i++){ // for this part of the code I reffered to chatGPT but rewrote the code after
+        for (int i = start; i<=end;i++){ 
             player_board [i][column - 'A']= '@';// It was the same logic as using 
         }                               // getchar() and subtracting 0 to get the char to int but this is the opposite 
     }
@@ -213,7 +213,7 @@ to enter a new value/char. ***/
     }
     end = start+ship -1;
     if (ship_radar(row, end , player_board)==1){
-        for (int i = start; i<=end;i++){ // for this part of the code I was a little bit confused so I reffered to chatGPT
+        for (int i = start; i<=end;i++){ 
             player_board [row][i - 'A']= '@'; // for some guidance and I rewrote the code in my own way! It was the same logic as using 
         }
     }
@@ -400,8 +400,7 @@ to see whether or not it was a hit or miss ***/
 }
 
 void free_mem (char **board){ 
-/* For this function i used chatgpt to help me understand the fucnction because I was little bit confused 
-on how i needed to free the memory. I wrote the code in my own words though! */
+
     for (int i = 0; i< BOARD_SIZE; i++){
         free(board[i]);
     }
@@ -457,8 +456,6 @@ ill correct these by the time the revisions are due. ***/
             }
         }
     }
-    /* For these next 4 lines i resorted to using chat gpt to help me because I was little bit confused
-    with the whole freeing aspect of the code. */
     free_mem(player_1_board);
     free_mem(player_2_board);
     free_mem(gameboard1);
